@@ -24,20 +24,43 @@ public class CameraControls : MonoBehaviour {
     Action _fxShakeComplete = null;
 	Vector2 _fxShakeOffset = new Vector2();
 
-    /*Used to control the zoom in zoom out of our game*/
-    float Z_OFFSET = -10;
+    // Control how far the player is to the left of camera center
+    private const float DEFAULT_X_OFFSET = 0.0f;
 
-    private PlayerMovement player;
+    private float xOffset;
+    
+    private PlayerCore player;
+
+    // Optimization
+    private Transform _transform;
+    public new Transform transform
+    {
+        get
+        {
+            if (_transform == null)
+                _transform = base.transform;
+            return _transform;
+        }
+    }
+
+    void Awake()
+    {
+        xOffset = DEFAULT_X_OFFSET;
+    }
 
 	// Use this for initialization
 	void Start () {
         player = GameManager.Player;
-        transform.position = player.transform.position + new Vector3(0, 0, Z_OFFSET);
+        transform.position = new Vector3(player.transform.position.x + xOffset,
+                                         transform.position.y,
+                                         transform.position.z);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = player.transform.position + new Vector3(0, 0, Z_OFFSET);
+        transform.position = new Vector3(player.transform.position.x + xOffset,
+                                         transform.position.y,
+                                         transform.position.z);
         
         //Update the "shake" special effect
         if (_fxShakeDuration > 0)

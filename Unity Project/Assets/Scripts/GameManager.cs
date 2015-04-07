@@ -5,8 +5,8 @@ public class GameManager : MonoBehaviour {
 
     private static GameManager instance;
 
-    private static PlayerMovement _player;
-    public static PlayerMovement Player
+    private static PlayerCore _player;
+    public static PlayerCore Player
     {
         get
         {
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour {
 
     private static void FindPlayer()
     {
-        _player = Object.FindObjectOfType<PlayerMovement>();
+        _player = Object.FindObjectOfType<PlayerCore>();
         if (_player == null)
         {
             Debug.Log("Cannot find player on the current scene.");
