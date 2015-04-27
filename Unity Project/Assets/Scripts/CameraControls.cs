@@ -58,6 +58,7 @@ public class CameraControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //adjust this so that it follows the fish as it falls into the lower levels
         transform.position = new Vector3(player.transform.position.x + xOffset,
                                          transform.position.y,
                                          transform.position.z);

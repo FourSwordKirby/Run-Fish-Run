@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public GameObject[] availableRooms;
+
     void Awake()
     {
         if (instance == null)
@@ -85,4 +87,5 @@ public class GameManager : MonoBehaviour {
     {
         Camera.Shake();
     }
+
 }

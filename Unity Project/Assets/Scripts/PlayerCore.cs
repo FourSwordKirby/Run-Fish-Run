@@ -20,6 +20,7 @@ public class PlayerCore : MonoBehaviour
 
     private Animator anim;
     private new Rigidbody2D rigidbody2D;
+    private BoxCollider2D collider;
 
     // Optimization
     private Transform _transform;
@@ -32,16 +33,28 @@ public class PlayerCore : MonoBehaviour
             return _transform;
         }
     }
+    private void Initialize()
+    {
+        allowExternalInstantVelocity = false;
+        ClearPhysicsBuffers();
+        anim.SetTrigger("Running");
+        collider.enabled = true;
+    }
 
     void Awake()
     {
         anim = GetComponent<Animator>();
         rigidbody2D = GetComponent<Rigidbody2D>();
+        collider = GetComponent<BoxCollider2D>();
 
-        allowExternalInstantVelocity = false;
-        ClearPhysicsBuffers();
+        Initialize();
     }
 
+
+    void Update()
+    {
+
+    }
 
     void FixedUpdate()
     {
@@ -75,11 +88,25 @@ public class PlayerCore : MonoBehaviour
         ClearPhysicsBuffers();
     }
 
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        // If incoming obstacle is harmful
+        if(coll.gameObject.GetComponent<HarmfulPart>() != null) {
+            Die();
+        }
+    }
+
     private void ClearPhysicsBuffers()
     {
         instantVelocity = Vector2.zero;
         impulseBuffer = Vector2.zero;
         forceBuffer = Vector2.zero;
+    }
+
+    private void Die()
+    {
+        collider.enabled = false;
+        anim.SetTrigger("Die");
     }
 
     public void SetInstantVelocity(Vector2 v)
