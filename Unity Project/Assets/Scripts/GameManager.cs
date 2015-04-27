@@ -85,4 +85,6 @@ public class GameManager : MonoBehaviour {
     {
         Camera.Shake();
     }
+
+
 }

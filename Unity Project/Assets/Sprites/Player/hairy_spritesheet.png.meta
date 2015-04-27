@@ -1,9 +1,18 @@
 fileFormatVersion: 2
-guid: 42c5f637c111a694eb2e624fdd439aa2
-timeCreated: 1430104002
+guid: be13d77daf6bd1f4c9730f96a90efd93
+timeCreated: 1430110152
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hairy_spritesheet_0
+    21300002: hairy_spritesheet_1
+    21300004: hairy_spritesheet_2
+    21300006: hairy_spritesheet_3
+    21300008: hairy_spritesheet_4
+    21300010: hairy_spritesheet_5
+    21300012: hairy_spritesheet_6
+    21300014: hairy_spritesheet_7
+    21300016: hairy_spritesheet_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +39,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +57,97 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: hairy_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 753
+        width: 282
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hairy_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 749
+        width: 282
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hairy_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 728
+        width: 282
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hairy_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 426
+        width: 282
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hairy_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 434
+        width: 282
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hairy_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 414
+        width: 282
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hairy_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 102
+        width: 282
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hairy_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 104
+        width: 282
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hairy_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 91
+        width: 282
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
