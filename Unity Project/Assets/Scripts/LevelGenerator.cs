@@ -35,8 +35,6 @@ public class LevelGenerator : MonoBehaviour {
         //Picks a random index of the room type (Prefab) to generate.
         int randomRoomIndex = Random.Range(0, availableRooms.Length);
 
-        Debug.Log(randomRoomIndex);
-
         //Creates a room object from the array of available rooms using the random index above.
         GameObject room = (GameObject)Instantiate(availableRooms[randomRoomIndex]);
 

@@ -11,8 +11,9 @@ GameObject:
   - 212: {fileID: 21292822}
   - 61: {fileID: 6163672}
   - 61: {fileID: 6184176}
+  - 61: {fileID: 6165478}
   m_Layer: 0
-  m_Name: undergound3
+  m_Name: underground3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10.6000004, z: 0}
+  m_LocalPosition: {x: 19.4666672, y: -12.8999176, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,7 +43,20 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -5.25}
   serializedVersion: 2
-  m_Size: {x: 12.8000002, y: .469999999}
+  m_Size: {x: 12.8000002, y: 9.68999958}
+--- !u!61 &6165478
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118912}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -5.51000023, y: 8}
+  serializedVersion: 2
+  m_Size: {x: 2.0999999, y: 4}
 --- !u!61 &6184176
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -53,9 +67,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 3.4000001}
+  m_Offset: {x: 2.4000001, y: 8}
   serializedVersion: 2
-  m_Size: {x: 12.8000002, y: 4}
+  m_Size: {x: 8.13000011, y: 4}
 --- !u!212 &21292822
 SpriteRenderer:
   m_ObjectHideFlags: 1
