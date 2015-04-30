@@ -26,8 +26,11 @@ public class CameraControls : MonoBehaviour {
 
     // Control how far the player is to the left of camera center
     private const float DEFAULT_X_OFFSET = 0.0f;
+    // Control how far down the player is to camera center
+    private const float DEFAULT_Y_OFFSET = 3.5f;
 
     private float xOffset;
+    private float yOffset;
     
     private PlayerCore player;
 
@@ -46,6 +49,7 @@ public class CameraControls : MonoBehaviour {
     void Awake()
     {
         xOffset = DEFAULT_X_OFFSET;
+        yOffset = DEFAULT_Y_OFFSET;
     }
 
 	// Use this for initialization
@@ -60,7 +64,7 @@ public class CameraControls : MonoBehaviour {
 	void Update () {
         //adjust this so that it follows the fish as it falls into the lower levels
         transform.position = new Vector3(player.transform.position.x + xOffset,
-                                         transform.position.y,
+                                         player.transform.position.y + yOffset,
                                          transform.position.z);
         
         //Update the "shake" special effect

@@ -33,6 +33,13 @@ public class PlayerCore : MonoBehaviour
             return _transform;
         }
     }
+
+    void OnMouseDown()
+    {
+        // this object was clicked - do something
+        Destroy(this.gameObject);
+    }  
+
     private void Initialize()
     {
         allowExternalInstantVelocity = false;
