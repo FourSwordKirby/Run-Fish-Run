@@ -33,6 +33,7 @@ public class PlayerCore : MonoBehaviour
             return _transform;
         }
     }
+
     private void Initialize()
     {
         allowExternalInstantVelocity = false;

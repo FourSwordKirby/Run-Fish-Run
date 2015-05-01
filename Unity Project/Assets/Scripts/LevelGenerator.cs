@@ -35,8 +35,6 @@ public class LevelGenerator : MonoBehaviour {
         //Picks a random index of the room type (Prefab) to generate.
         int randomRoomIndex = Random.Range(0, availableRooms.Length);
 
-        Debug.Log(randomRoomIndex);
-
         //Creates a room object from the array of available rooms using the random index above.
         GameObject room = (GameObject)Instantiate(availableRooms[randomRoomIndex]);
 
@@ -65,7 +63,7 @@ public class LevelGenerator : MonoBehaviour {
         float playerX = GameManager.Player.transform.position.x;
 
         //This is the point after which the room should be removed. If room position is behind this point (to the left), it needs to be removed. 
-        float removeRoomX = playerX - screenWidthInPoints;
+        float removeRoomX = playerX - screenWidthInPoints * 2; //the * 2 is an arbitrary constant we add to adjust things
 
         //If there is no room after addRoomX point you need to add a room, since the end of the level is closer then the screen width.
         float addRoomX = playerX + screenWidthInPoints;
