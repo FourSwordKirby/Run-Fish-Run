@@ -39,11 +39,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412a768723456754793a243b0e95a762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableRooms:
+  availableOverworldRooms:
   - {fileID: 189200, guid: b8e769fd55b62a04bbf58e988f838064, type: 2}
   - {fileID: 148978, guid: 84fab9bdd24e6d646976be68cfbd4a09, type: 2}
   - {fileID: 157854, guid: 950d430bab708754d8879d75101480f8, type: 2}
   - {fileID: 196762, guid: 9c1c5e640432ef94bbb0c20d5e9dcbd4, type: 2}
+  - {fileID: 125724, guid: f7a878cc55cf1ca49a04eb9a579cc6d7, type: 2}
+  availableUnderworldRooms:
+  - {fileID: 122550, guid: ed34ab4acf54eba4a86fc5590ba1ba2c, type: 2}
+  - {fileID: 175734, guid: 4a350f869f682cc4aa1bc6db25a05584, type: 2}
+  - {fileID: 118912, guid: f33ad9544a85d6d408e86be0e60a5d8f, type: 2}
+  - {fileID: 140354, guid: 5e478107c26ae8947ae98d5de64f1af5, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

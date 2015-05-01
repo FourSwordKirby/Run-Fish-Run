@@ -25,7 +25,9 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public GameObject[] availableRooms;
+    public GameObject[] availableOverworldRooms;
+
+    public GameObject[] availableUnderworldRooms;
 
     void Awake()
     {
@@ -47,6 +49,11 @@ public class GameManager : MonoBehaviour {
     {
         FindPlayer();
         FindCamera();
+    }
+
+    void FixedUpdate()
+    {
+            
     }
 
     public static void LoadScene(string sceneName, bool persistPlayer = true)

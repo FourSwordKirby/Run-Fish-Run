@@ -96,6 +96,11 @@ public class CameraControls : MonoBehaviour {
         }
 	}
 
+    public Vector3 getPosition()
+    {
+        return transform.position;
+    }
+
     public void Shake(float Intensity = 0.05f, float Duration = 0.5f, Action OnComplete = null, bool Force = true, uint Direction = 0)
     {
         if(!Force && ((_fxShakeOffset.x != 0) || (_fxShakeOffset.y != 0)))

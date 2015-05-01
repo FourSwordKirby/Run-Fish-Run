@@ -6,7 +6,7 @@ public class PlayerCore : MonoBehaviour
     public enum State { FREE, STUNNED, GRAPPLE, SWORD, DASH, CHARGE };
 
     //the forward speed of our character
-    private const float DEFAULT_MOVESPEED = 2.0f;
+    private const float DEFAULT_MOVESPEED = 4.0f;
 
     private bool allowKeyMovement = true;
     private bool allowActions = true;
@@ -54,7 +54,14 @@ public class PlayerCore : MonoBehaviour
 
     void Update()
     {
-
+        if (transform.position.y < -50)
+        {
+            Debug.Log("done");
+            collider.enabled = true;
+            transform.position = new Vector3(0f, -3f, 0f);
+            rigidbody2D.velocity = new Vector3(0f, 0f, 0f);
+            Destroy(this);
+        }
     }
 
     void FixedUpdate()
